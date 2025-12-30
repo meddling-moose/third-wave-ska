@@ -41,7 +41,37 @@ songs = [
     ("The Aquabats", "Super Rad"),
     ("Less Than Jake", "The Science of Selling Yourself Short"),
     ("Streetlight Manifesto", "Point / Counterpoint"),
-    
+    ("Catch 22", "Kaesby Nights"),
+    ("Catch 22", "9mm and a Three Piece Suit"),
+    ("Operation Ivy", "Sound System"),
+    ("Reel Big Fish", "Beer"),
+    ("The O.C. Supertones", "Supertones Strike Back"),
+    ("Sublime", "Badfish"),
+    ("Goldfinger", "Tijuana Sunrise"),
+    ("No Doubt", "Spiderwebs"),
+    ("No Doubt", "Total Hate '95"),
+    ("Rancid", "Time Bomb"),
+    ("Rancid", "Ruby Soho"),
+    ("The Toasters", "2Tone Army"),
+    ("The Slackers", "Watch This"),
+    ("Blue Meanies", "Smash the Magnavox"),
+    ("Big D and the Kids Table", "Noise Complaint"),
+    ("Big D and the Kids Table", "Shining On"),
+    ("No Doubt", "Doormat"),
+    ("Mad Caddie", "Road Rash"),
+    ("The Hippos", "Lost It"),
+    ("The Hippos", "Far Behind"),
+    ("Mustard Plug", "Mr. Smiley"),
+    ("Dance Hall Crashers", "Lost Again"),
+    ("The Pietasters", "Out All Night"),
+    ("Less Than Jake", "Johnny Quest Thinks We're Sellouts"),
+    ("Buck-O-Nine", "My Town"),
+    ("The Suicide Machines", "New Girl"),
+    ("Sublime", "Seed"),
+    ("The Interrupters", "Bad Guy"),
+    ("Five Iron Frenzy", "Get Your Riot Gear"),
+    ("Mustard Plug", "Beer"),
+    ("MU330", "Stuff")
 ]
 
 rows = []
@@ -51,7 +81,7 @@ for artist, title in songs:
     song = genius.search_song(title, artist)
 
     if not song or not song.lyrics:
-        print(" -> not fouond")
+        print(" -> not found")
         continue
 
     rows.append({
