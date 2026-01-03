@@ -19,7 +19,7 @@ genius = lyricsgenius.Genius(
 
 songs = [
     ("The Mighty Mighty Bosstones", "The Impression That I Get"),
-    ("The Mighty Might Bosstones", "Someday I Suppose"),
+    ("The Mighty Mighty Bosstones", "Someday I Suppose"),
     ("Goldfinger", "Here in Your Bedroom"),
     ("The Suicide Machines", "No Face"),
     ("No Doubt", "Sunday Morning"),
@@ -54,7 +54,6 @@ songs = [
     ("Rancid", "Ruby Soho"),
     ("The Toasters", "2Tone Army"),
     ("The Slackers", "Watch This"),
-    ("Blue Meanies", "Smash the Magnavox"),
     ("Big D and the Kids Table", "Noise Complaint"),
     ("Big D and the Kids Table", "Shining On"),
     ("No Doubt", "Doormat"),
