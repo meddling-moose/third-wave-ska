@@ -1,0 +1,399 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='artist_timeline' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='artist_counts_locations_years' inline='true' name='federated.11j96d01cqsdz012mzlr90cwf25r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='artist_counts_locations_years' name='textscan.1234rns0qfld071dpfsbh0on6gt3'>
+            <connection class='textscan' directory='/Users/ryanhoffman/Desktop/development/personal/thirdwaveska/data/processed' filename='artist_counts_locations_years.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1234rns0qfld071dpfsbh0on6gt3' name='artist_counts_locations_years.csv' table='[artist_counts_locations_years#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='artist' ordinal='0' />
+            <column datatype='integer' name='count' ordinal='1' />
+            <column datatype='string' name='city_formed' ordinal='2' />
+            <column datatype='string' name='state_formed' ordinal='3' />
+            <column datatype='integer' name='year_formed' ordinal='4' />
+            <column datatype='integer' name='popularity_score' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artist]</local-name>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias>artist</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count]</local-name>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias>count</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_formed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city_formed]</local-name>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias>city_formed</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state_formed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state_formed]</local-name>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias>state_formed</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year_formed</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year_formed]</local-name>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias>year_formed</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[popularity_score]</local-name>
+            <parent-name>[artist_counts_locations_years.csv]</parent-name>
+            <remote-alias>popularity_score</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Formation Era' datatype='string' name='[Calculation_3068992069950808064]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [year_formed] &lt; 1990 THEN &quot;Pre 3rd Wave&quot;&#10;ELSEIF [year_formed] &lt;= 1995 THEN &quot;Early 3rd Wave&quot;&#10;ELSEIF [year_formed] &lt;= 2000 THEN &quot;Peak Third Wave&quot;&#10;ELSE &quot;Late/Post&quot;&#10;END' />
+      </column>
+      <column caption='artist_counts_locations_years.csv' datatype='table' name='[__tableau_internal_object_id__].[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]' role='measure' type='quantitative' />
+      <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+      <column caption='City Formed' datatype='string' name='[city_formed]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Count' datatype='integer' name='[count]' role='measure' type='quantitative' />
+      <column caption='Popularity Score' datatype='integer' name='[popularity_score]' role='measure' type='quantitative' />
+      <column caption='State Formed' datatype='string' name='[state_formed]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Year Formed' datatype='integer' name='[year_formed]' role='dimension' type='ordinal' />
+      <drill-paths>
+        <drill-path name='state_formed, city_formed'>
+          <field>[state_formed]</field>
+          <field>[city_formed]</field>
+        </drill-path>
+      </drill-paths>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/gd/7vmq0h651d99wz_y83vt_g040000gn/T/tableau-temp/#TableauTemp_1jz583w1x35vzh1dwpcf60z3kw45.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>artist</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[artist]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>artist</remote-alias>
+              <ordinal>0</ordinal>
+              <family>artist_counts_locations_years.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>count</remote-alias>
+              <ordinal>1</ordinal>
+              <family>artist_counts_locations_years.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>city_formed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[city_formed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>city_formed</remote-alias>
+              <ordinal>2</ordinal>
+              <family>artist_counts_locations_years.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>20</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>state_formed</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[state_formed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>state_formed</remote-alias>
+              <ordinal>3</ordinal>
+              <family>artist_counts_locations_years.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year_formed</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year_formed]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>year_formed</remote-alias>
+              <ordinal>4</ordinal>
+              <family>artist_counts_locations_years.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>popularity_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[popularity_score]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>popularity_score</remote-alias>
+              <ordinal>5</ordinal>
+              <family>artist_counts_locations_years.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='artist_counts_locations_years.csv' id='artist_counts_locations_years.csv_0C823E397D8F4307AD7D8A45535E1F03'>
+            <properties context=''>
+              <relation connection='textscan.1234rns0qfld071dpfsbh0on6gt3' name='artist_counts_locations_years.csv' table='[artist_counts_locations_years#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='artist' ordinal='0' />
+                  <column datatype='integer' name='count' ordinal='1' />
+                  <column datatype='string' name='city_formed' ordinal='2' />
+                  <column datatype='string' name='state_formed' ordinal='3' />
+                  <column datatype='integer' name='year_formed' ordinal='4' />
+                  <column datatype='integer' name='popularity_score' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Artist Timeline'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='artist_counts_locations_years' name='federated.11j96d01cqsdz012mzlr90cwf25r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.11j96d01cqsdz012mzlr90cwf25r'>
+            <column caption='Formation Era' datatype='string' name='[Calculation_3068992069950808064]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [year_formed] &lt; 1990 THEN &quot;Pre 3rd Wave&quot;&#10;ELSEIF [year_formed] &lt;= 1995 THEN &quot;Early 3rd Wave&quot;&#10;ELSEIF [year_formed] &lt;= 2000 THEN &quot;Peak Third Wave&quot;&#10;ELSE &quot;Late/Post&quot;&#10;END' />
+            </column>
+            <column caption='Artist' datatype='string' name='[artist]' role='dimension' type='nominal' />
+            <column-instance column='[popularity_score]' derivation='Avg' name='[avg:popularity_score:qk]' pivot='key' type='quantitative' />
+            <column caption='City Formed' datatype='string' name='[city_formed]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column-instance column='[Calculation_3068992069950808064]' derivation='None' name='[none:Calculation_3068992069950808064:nk]' pivot='key' type='nominal' />
+            <column-instance column='[artist]' derivation='None' name='[none:artist:nk]' pivot='key' type='nominal' />
+            <column-instance column='[city_formed]' derivation='None' name='[none:city_formed:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state_formed]' derivation='None' name='[none:state_formed:nk]' pivot='key' type='nominal' />
+            <column-instance column='[year_formed]' derivation='None' name='[none:year_formed:ok]' pivot='key' type='ordinal' />
+            <column caption='Popularity Score' datatype='integer' name='[popularity_score]' role='measure' type='quantitative' />
+            <column caption='State Formed' datatype='string' name='[state_formed]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column caption='Year Formed' datatype='integer' name='[year_formed]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.11j96d01cqsdz012mzlr90cwf25r].[none:Calculation_3068992069950808064:nk]' />
+              <size column='[federated.11j96d01cqsdz012mzlr90cwf25r].[avg:popularity_score:qk]' />
+              <lod column='[federated.11j96d01cqsdz012mzlr90cwf25r].[none:state_formed:nk]' />
+              <lod column='[federated.11j96d01cqsdz012mzlr90cwf25r].[none:city_formed:nk]' />
+              <lod column='[federated.11j96d01cqsdz012mzlr90cwf25r].[none:artist:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#757575'>Artist: </run>
+                <run bold='true'><![CDATA[<[federated.11j96d01cqsdz012mzlr90cwf25r].[none:artist:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Formed: </run>
+                <run bold='true'><![CDATA[<[federated.11j96d01cqsdz012mzlr90cwf25r].[none:year_formed:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Location: </run>
+                <run bold='true'><![CDATA[<[federated.11j96d01cqsdz012mzlr90cwf25r].[none:city_formed:nk]>, <[federated.11j96d01cqsdz012mzlr90cwf25r].[none:state_formed:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#757575'>Popularity Score: </run>
+                <run bold='true'><![CDATA[<[federated.11j96d01cqsdz012mzlr90cwf25r].[avg:popularity_score:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.5932043790817261' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.11j96d01cqsdz012mzlr90cwf25r].[Latitude (generated)]</rows>
+        <cols>[federated.11j96d01cqsdz012mzlr90cwf25r].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.11j96d01cqsdz012mzlr90cwf25r].[none:year_formed:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' mark-type='all' />
+      </table>
+      <simple-id uuid='{F025C334-BF0A-4771-870A-D21DADA1CA50}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Artist Timeline'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.11j96d01cqsdz012mzlr90cwf25r].[avg:popularity_score:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.11j96d01cqsdz012mzlr90cwf25r].[none:Calculation_3068992069950808064:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>1995</bucket>
+          </multibucket>
+        </current-page>
+      </viewpoint>
+      <simple-id uuid='{38CFC6DE-8288-486C-92D2-E6761230A86C}' />
+    </window>
+  </windows>
+</workbook>

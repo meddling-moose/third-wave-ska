@@ -41,7 +41,7 @@ songs = [
     ("The Aquabats", "Super Rad"),
     ("Less Than Jake", "The Science of Selling Yourself Short"),
     ("Streetlight Manifesto", "Point / Counterpoint"),
-    ("Catch 22", "Kaesby Nights"),
+    ("Catch 22", "Kaesbey Nights"),
     ("Catch 22", "9mm and a Three Piece Suit"),
     ("Operation Ivy", "Sound System"),
     ("Reel Big Fish", "Beer"),
@@ -57,7 +57,7 @@ songs = [
     ("Big D and the Kids Table", "Noise Complaint"),
     ("Big D and the Kids Table", "Shining On"),
     ("No Doubt", "Doormat"),
-    ("Mad Caddie", "Road Rash"),
+    ("Mad Caddies", "Road Rash"),
     ("The Hippos", "Lost It"),
     ("The Hippos", "Far Behind"),
     ("Mustard Plug", "Mr. Smiley"),
@@ -70,16 +70,32 @@ songs = [
     ("The Interrupters", "Bad Guy"),
     ("Five Iron Frenzy", "Get Your Riot Gear"),
     ("Mustard Plug", "Beer"),
-    ("MU330", "Stuff")
+    ("MU330", "Stuff"),
+    ("Slapstick", "There's a Metal Head in The Parking Lot"),
+    ("Skankin Pickle", "Special Brew"),
+    ("The Arrogant Sons of Bitches", "So Lets Go Nowhere"),
+    ("Choking Victim", "500 Channels"),
+    ("Fishbone", "Party at Ground Zero"),
+    ("NOFX", "Linoleum"),
+    ("NOFX", "All Outta Angst"),
+    ("100 Gecs", "I Got My Tooth Removed"),
+    ("The Interrupters", "She's Kerosene"),
+    ("Streetlight Manifesto", "Such Great Heights"),
+    ("Streetlight Manifesto", "Me and Julio Down By The Schoolyard"),
+    ("[spunge]", "Kicking Pigeons")
 ]
 
 rows = []
 
+print(f"Total Number of Songs: {len(songs)}")
+
 for artist, title in songs:
+    missed_songs = 0
     print(f"Fetching: {artist} - {title}")
     song = genius.search_song(title, artist)
 
     if not song or not song.lyrics:
+        missed_songs += 1
         print(" -> not found")
         continue
 
@@ -91,8 +107,9 @@ for artist, title in songs:
         "lyrics": song.lyrics,
         "source": "genius"
     })
+print(f"Total Missed Songs: {missed_songs}")
 
 df = pd.DataFrame(rows)
 outpath = "data/raw/lyrics_raw.csv"
 df.to_csv(outpath, index=False)
-print(f"/nWrote {len(df)} rows to outpath")
+print(f"Wrote {len(df)} rows to outpath")
