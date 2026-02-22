@@ -19,7 +19,7 @@ ALBUMS_CSV = "data/raw/albums.csv"
 OUTPUT_MASTER = "data/raw/ska_songs_full.parquet"
 
 BATCH_SIZE = 10
-BATCH_NUMBER = 0   # set to 1,2,3... for later batches
+BATCH_NUMBER = 0   # Increment to pull songs in batches 1, 2, 3...
 SLEEP_SECONDS = 3.0
 
 # If True, you'll see the library's "Searching for..." messages
