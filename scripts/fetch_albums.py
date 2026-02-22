@@ -179,7 +179,7 @@ for i, (_, row) in enumerate(batch_df.iterrows(), start=1):
                 "state": row.get("state"),
                 "label": row.get("label"),
                 "label_type": row.get("label_type"),
-                "commercial_tier": row.get("commercial_tier"),
+                "commercial_peak": row.get("commercial_peak"),
             })
             added_any = True
 
